@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIFS</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center mt-4 mb-4">GIF PARTY</h1>
-        <form class="form-inline d-flex justify-content-center mb-4">
-            <input type="text" name="search" id="search" placeholder="Search" class="form-control mr-2">
-            <input type="submit" class="btn btn-secondary" value="Search GIFS!">
-            <button id="remove" class="btn btn-danger ml-2">Remove GIFS</button>
+<section class="mytodo-container">
+    <div class="mytodo-list">
+        <form action="javascript:void(0);" id="createForm">
+            <input type="text" id="add-task" placeholder="New Task">
+            <button onclick="createTask()">Create</button>
         </form>
-        <div id="gif-area" class="row"></div>
+        <form action="javascript:void(0);" id="updateForm">
+            <input type="text" id="update-task">
+            <input type="submit" value="Update">
+            <a onclick="closeInput()" id="close">&#10006;</a>
+        </form>
+        <p id="counter"></p>
+        <table>
+            <tr>
+                <th>My Todo List</th>
+            </tr>
+            <tbody id="mytodo-tasks"></tbody>
+        </table>    
     </div>
+</section>
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="app.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>

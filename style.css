@@ -1,0 +1,10 @@
+.mytodo-list{
+    width: 320px;
+    margin: 100px auto;
+}
+.counter{
+    margin: 10px 0;
+}
+#updateForm{
+    display: none;
+}
