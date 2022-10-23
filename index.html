@@ -4,31 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo List</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
-<section class="mytodo-container">
-    <div class="mytodo-list">
-        <form action="javascript:void(0);" id="createForm">
-            <input type="text" id="add-task" placeholder="New Task">
-            <button onclick="createTask()">Create</button>
-        </form>
-        <form action="javascript:void(0);" id="updateForm">
-            <input type="text" id="update-task">
-            <input type="submit" value="Update">
-            <a onclick="closeInput()" id="close">&#10006;</a>
-        </form>
+    <section class="mytodo-container">
+        <!-- Create Form -->
+        <div class="mytodo-list">
+        <form action="javascript:void(0);" id="CreateForm"><input type="text" id="add-task" placeholder="New Task"> <input type="submit" onclick="CreateTask()" value="Create"></form>
+        <!-- Update Form -->
+         <form action="javascript:void(0);" id="UpdateForm"> 
+         <input type="text" id="update-task"> <input type="submit" value="Update"> <a onclick="CloseInput()" id="close">&#10006;</a></form>
+        <!-- Counter -->
         <p id="counter"></p>
-        <table>
-            <tr>
-                <th>My Todo List</th>
-            </tr>
-            <tbody id="mytodo-tasks"></tbody>
-        </table>    
-    </div>
-</section>
+        <!-- MyTodo List Table -->
+         <table>
+         <tr><th>My Todo List</th></tr>
+         <tbody id="mytodo-tasks"></tbody>
+         </table>
+         </div>
+         </section>
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="app.js"></script>
